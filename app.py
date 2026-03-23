@@ -6,10 +6,11 @@ import datetime
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = '${{RAILWAY_PRIVATE_DOMAIN}}'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '@#$123Bangtan'
-app.config['MYSQL_DB'] = 'portfolio'
+app.config['MYSQL_PASSWORD'] = '${{MYSQL_ROOT_PASSWORD}}'
+app.config['MYSQL_DB'] = 'railway'
+app.config['MYSQLPORT'] = '3306'
 
 mysql = MySQL(app)
 
