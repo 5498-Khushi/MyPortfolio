@@ -62,7 +62,7 @@ def save_contact():
         print("Error:", e)
         return jsonify({'success': False, 'error': str(e)})
     
-app.run(debug=True)
+
 
 from flask import Flask, jsonify, render_template, request
 from flask_mysqldb import MySQL
